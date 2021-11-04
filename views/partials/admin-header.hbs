@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-info text-white">
+  <a class="navbar-brand font-weight-bold" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link text-white font-weight-bold" href="#">Admin <span class="sr-only">(current)</span></a>
+      </li>
+      {{!-- <li class="nav-item">
+        <a class="nav-link text-white" href="#">All products</a>
+      </li> --}}
+       {{!-- <li class="nav-item">
+        <a class="nav-link text-white" href="#">All orders</a>
+      </li> --}}
+       <li class="nav-item">
+        <a class="nav-link text-white" href="#">All users</a>
+      </li>
+      {{#if adminIn}}
+      <li class="nav-item">
+        <a class="nav-link text-white" href="/admin/adminlogout">Logout</a>
+      </li>
+      {{/if}}
+      {{!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Items
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Cloths</a>
+          <a class="dropdown-item" href="#">Ornaments</a>
+          <div class="dropdown-divider">Furniture</div>
+          <a class="dropdown-item" href="#">food</a>
+        </div>
+      </li> --}}
+    </ul>
+    
+  </div>
+</nav>

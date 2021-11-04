@@ -1,0 +1,40 @@
+<div class="container pt-5">
+  {{#if flag}}
+ <div class="row d-flex flex-column align-items-center justify-content-center">
+   <h1>Welcome User</h1>
+  <a class="btn btn-info" href="/login">Login</a>
+ </div>
+
+
+ 
+  {{else}}
+     <div class="row d-flex flex-column align-items-center justify-content-center">
+   <h1>Welcome user</h1>
+  <img src="/product-images/{{id}}.png" alt="">
+ </div>
+  {{!-- <div class="row w-100 " id="card-container">
+    {{#each products}}
+    <div class="col-12 col-md-6 col-lg-3  w-100 mb-2 p-2">
+      <div class="card bg-info" >
+  <img class="card-img-top product-images" src="/product-images/{{this._id}}.png" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title text-white">{{this.title}}</h5>
+    <p>{{this.item}}</p>
+    <p class="card-text text-truncate">{{this.description}}</p>
+    <a href="#" class="btn btn-dark">Add to cart</a>
+  </div>
+  </div>
+    </div>
+{{/each}}
+  </div>
+ --}}
+
+
+
+
+  
+
+ {{/if}}
+
+
+</div>

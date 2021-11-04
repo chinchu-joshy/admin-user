@@ -1,0 +1,106 @@
+{{!-- <div class="container w-100">
+
+    <div class="row w-100">
+       
+        <div class="col-12 ">
+             <div id="login">
+        
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" action="/admin/adminlogin" method="post">
+                            <h3 class="text-center text-info">Login</h3>
+                            <div class="form-group">
+                                <label for="username" class="text-info">Email:</label><br>
+                                <input type="email" name="email" id="adminemail" class="form-control" >
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-info">Password:</label><br>
+                                <input type="password" name="password" id="adminpassword" class="form-control" >
+                            </div>
+                            <div class="form-group">
+                                {{#if alert}}
+                                <label for="remember-me" class="text-danger"><span>{{alert}}</span> </label><br>
+                            {{else}}
+                                <label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
+                                {{/if}}
+                                <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+
+ --}}
+
+<div class="container w-100">
+    <div class="row w-100">
+       
+        <div class="col-12 ">
+             <div id="login">
+        
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="registration_admin" class="form" action="/admin/adminlogin" method="post" onsubmit="check()">
+                            <h3 class="text-center text-info">Login</h3>
+                            <div class="form-group">
+                                <label for="username" id="username" class="text-info">Email:</label><br>
+                                <input type="email" name="email" id="form_email_admin" class="form-control" >
+                                <p class="error_form" style="visibility: hidden; color:brown" id="email_error_message_admin">Plese fill the field  </p>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-info">Password:</label><br>
+                                <input type="password" name="password" id="form_password_admin" class="form-control" >
+                                <span class="error_form" style="visibility: hidden ;color:brown" id="password_error_message_admin">Please fill the field</span>
+                            </div>
+                            <div class="form-group">
+                                {{#if alert}}
+                                <label for="remember-me" class="text-danger"><span>{{alert}}</span> </label><br>
+                            
+                                {{/if}}
+                                <button id="btn-submit" type="submit" name="submit"   class="btn btn-info btn-md" >Submit</button>
+                            </div>
+                            
+                        </form> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+<script>
+
+
+
+     document.querySelector('#btn-submit').addEventListener('click', function(event) {
+
+  
+  console.log('clicked')  
+      let x = document.forms["registration_admin"]["form_email_admin"].value;
+      let y=document.forms["registration_admin"]["form_password_admin"].value;
+      console.log(x)
+      if (x == "" ) {
+          event.preventDefault();
+       
+        document.getElementById('email_error_message_admin').style.visibility="visible"
+      }if(y== ""){
+          event.preventDefault();
+          document.getElementById('password_error_message_admin').style.visibility="visible"
+      }
+});
+      
+   
+    
+
+</script>

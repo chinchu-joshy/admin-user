@@ -1,0 +1,96 @@
+<div class="container pt-5">
+   {{#if flag}}
+ <div class="row d-flex flex-column align-items-center justify-content-center">
+   <h1>Welcome Admin</h1>
+  <a class="btn btn-info" href="/admin/adminlogin">Login</a>
+ </div>
+
+
+ 
+  {{else}}
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center align-items-center pb-5">
+          <a href="/admin/add-product" class="btn btn-info"> <i class="fas fa-plus">Add</i></a> 
+        </div>
+    </div>
+    <div class="row" id="admin-table">
+        <div class="col-12">
+          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+        <table id="myTable" class="table">
+  <thead>
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">Username</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone number</th>
+      <th scope="col">Image </th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete </th>
+       <th scope="col">Block </th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    {{#each products}}
+    <tr>
+      <th scope="row">{{@index}} </th>
+      <td>{{this.username}}</td>
+      <td>{{this.email}}</td>
+      <td>{{this.phone}}</td>
+      <td><img class="product-image" src="/product-images/{{this._id}}.png"  alt="image"> </td>
+      <td><a href="/admin/edit/{{this._id}}" id="edit">Edit</a></td>
+      <td><a  onclick="return confirm('delete {{this.item}}?');" id="delete" href="/admin/delete/{{this._id}}">Delete</a></td>
+      
+      <td>
+        <button  id="{{this._id}}" class="text-danger"  onclick="check('{{this._id}}','{{this.status}}')">
+     {{this.status}}
+     
+     
+      </button>
+      
+      </td>
+      
+    </tr>
+   
+    {{/each}}  
+  </tbody>
+
+</table>
+
+        </div>
+    </div>
+    {{/if}}
+</div>
+
+
+    
+<script>
+  
+  function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+} 
+
+ 
+
+
+
+</script>
+
+
+
+

@@ -1,0 +1,74 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #17a2b8;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+  #login .container #login-row #login-column #login-box {
+    margin-top: 120px;
+    max-width: 600px;
+    height: 320px;
+    border: 1px solid #9C9C9C;
+    background-color: #EAEAEA;
+  }
+  #login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+  }
+  #login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -85px;
+  }
+.product-image{
+  width: 50px;
+  height: 50px;
+}
+.product-images{
+  width: 30px;
+  height: 100px;
+}
+#edit:hover{
+  background-color: blue;
+  color:white;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 10px;
+}
+#edit{
+  background-color: #010008;
+  font-weight: bolder;
+  padding: 5px;
+  border-radius: 10px;
+}
+#delete:hover{
+  background-color:red;
+  color:white;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 10px;
+}
+#delete{
+  background-color: #010008;
+  font-weight: bolder;
+  padding: 5px;
+  border-radius: 10px;
+}
+#card-container{
+  background-color: #f0e6e6;
+  padding: 2%;
+  box-shadow: 1px 1px 6px 1px #707272;
+}
+#admin-table{
+  background-color: #f0e6e6;
+  padding: 2%;
+  box-shadow: 1px 1px 6px 1px #707272;
+}
+#block{
+  background-color: #010008;
+  text-decoration: none;
+  font-weight: bolder;
+  padding: 5px;
+  box-sizing: border-box;
+  
+  border-radius: 10px;
+}

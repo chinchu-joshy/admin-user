@@ -1,0 +1,63 @@
+<div class="container w-100">
+    <div class="row w-100">
+       
+        <div class="col-12 ">
+             <div id="login">
+        
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="registration_form" class="form " action="/login" method="post">
+                            <h3 class="text-center text-info">Login</h3>
+                            <div class="form-group">
+                                <label for="username" class="text-info">Email:</label><br>
+                                <input type="email" name="email" id="form_email" class="form-control" >
+                                <span class="error_form" id="email_error_message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-info">Password:</label><br>
+                                <input type="password" name="password" id="form_password" class="form-control" >
+                                <span class="error_form" id="password_error_message"></span>
+                            </div>
+                            <div class="form-group">
+                                {{#if alert}}
+                                <label for="remember-me" class="text-danger"><span>{{alert}}</span> </label><br>
+                            
+                                {{/if}}
+                                <input  type="submit" name="submit" class="btn btn-info btn-md" value='submit'>
+                            </div>
+                            <div id="register-link" class="text-right">
+                                <a href="/register" class="text-info">Register here</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+{{!-- <script>
+ document.querySelector('#btnn-submit').addEventListener('click', function(event) {
+
+  
+  console.log('clicked')  
+      let x = document.forms["registration_form"]["form_email"].value;
+      let y=document.forms["registration_form"]["form_password"].value;
+      console.log(x)
+      if (x == "" ) {
+          event.preventDefault();
+       
+        document.getElementById('email_error_message').style.visibility="visible"
+      }if(y== ""){
+          event.preventDefault();
+          document.getElementById('password_error_message').style.visibility="visible"
+      }
+});
+
+
+
+
+</script> --}}

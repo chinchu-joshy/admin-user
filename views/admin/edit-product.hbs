@@ -1,0 +1,32 @@
+<div class="container mt-5  ">
+    <form class="d-flex flex-column justify-content-center align-items-center " 
+    action="/admin/edit-product/{{product._id}}" method="POST" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Username</label>
+    <input type="text" class="form-control" placeholder="Enter title" name="username" value={{product.username}} >
+    
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Product item</label>
+    <input type="text" class="form-control"  placeholder="Product item" name="email" value={{product.email}} >
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Product description</label>
+    <input type="text" class="form-control"  placeholder="Product description" name="phone" value={{product.phone}}>
+  </div>
+  <div class="form-group">
+    <img src="/product-images/{{product._id}}.png" style="width:50px,height:auto;" alt="" id="img">
+    <input type="file" class="form-control" name="image" id="input" >
+    
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+<script>
+    input.onchange = evt => {
+  const [file] = input.files
+  if (file) {
+    img.src = URL.createObjectURL(file)
+  }
+}
+</script>
